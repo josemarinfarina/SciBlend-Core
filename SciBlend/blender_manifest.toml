@@ -1,0 +1,22 @@
+schema_version = "1.0.0"
+id = "SciBlend"
+version = "1.0.0"
+name = "SciBlend"
+author = "José Marín"
+tagline = "Scientific Solutions for Blender"
+description = """
+v.1.0.0
+
+This addon enhances Blender's capabilities with specialized tools for importing and managing files and scenes. Key features include:
+Import static and animated files from Paraview with customizable settings
+Manage materials across imported objects
+Create and manipulate null objects for scene organization
+Group objects by type (cameras, lights, meshes)
+Quick scene setup with predefined lighting and render settings
+Streamlined UI panel for easy access to all functions
+"""
+blender_version_min = "4.2.0"
+license = ["free licensing"]
+tags = ["Import-Export"]
+type = "add-on"
+maintainer = "José Marín <marinfarinajose@gmail.com>"
