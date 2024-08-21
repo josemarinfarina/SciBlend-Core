@@ -11,18 +11,3 @@ https://github.com/user-attachments/assets/2374c9a9-43c7-4ce7-8629-3a7adeb4e3d4
 
 
 https://github.com/user-attachments/assets/e3b058e8-eb94-497c-853a-d520418599cf
-
-
-# SciBlend: Scientific Solutions for Blender
-
-### Demo
-![Demo.mp4](https://github.com/user-attachments/assets/675cdb0f-2aca-4328-be14-432923eab8e2)
-
-### Point Cloud Visualization
-![Point Cloud Visualization](https://github.com/user-attachments/assets/4bc2184c-d9bc-4ba3-8bc3-a18c295fea1e)
-
-### Glyphs Visualization
-![Glyphs Visualization](https://github.com/user-attachments/assets/2374c9a9-43c7-4ce7-8629-3a7adeb4e3d4)
-
-### Rendered results using Blender Cycles
-![Rendered results using Blender Cycles](https://github.com/user-attachments/assets/e3b058e8-eb94-497c-853a-d520418599cf)
