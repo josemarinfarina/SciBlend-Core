@@ -2,7 +2,7 @@ import bpy
 import os
 import bpy.utils.previews
 
-from .operators.import_operators import ImportStaticX3DOperator, ImportX3DAnimationOperator, ImportVTKAnimationOperator
+from .operators.import_operators import ImportStaticX3DOperator, ImportX3DAnimationOperator
 from .operators.material_operators import CreateSharedMaterialOperator, ApplySharedMaterialOperator, RemoveAllShadersOperator
 from .operators.object_operators import (
     CreateNullOperator, ParentNullToGeoOperator, NullToOriginOperator, CreateSceneOperator,
@@ -124,7 +124,6 @@ class SciBlendPanel(bpy.types.Panel):
 classes = (
     ImportStaticX3DOperator,
     ImportX3DAnimationOperator,
-    ImportVTKAnimationOperator,  
     CreateSharedMaterialOperator,
     ApplySharedMaterialOperator,
     RemoveAllShadersOperator,
