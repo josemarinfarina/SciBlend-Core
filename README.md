@@ -1,4 +1,4 @@
-# SciBlend: Bridging Paraview and Blender for Scientific Visualization
+# SciBlend: Bridging Paraview and Blender for Scientific Visualization v.2.0.0
 
 SciBlend is a powerful add-on for Blender 4.2 that serves as a crucial bridge between Paraview and Blender, revolutionizing the way scientific simulations are visualized. By combining Paraview's advanced data processing capabilities with Blender's superior rendering engine, SciBlend enables researchers and scientists to create stunning, photorealistic visualizations of complex scientific data in real-time.
 
@@ -26,6 +26,20 @@ SciBlend is a powerful add-on for Blender 4.2 that serves as a crucial bridge be
 
 
 https://github.com/user-attachments/assets/675cdb0f-2aca-4328-be14-432923eab8e2
+
+## Updated Features
+
+- **Advanced X3D Import**: Import static and animated X3D data with customizable settings.
+- **Material Management**: Easily create and apply shared materials to represent different data attributes.
+- **Null Object Manipulation**: Create and manipulate null objects for better scene organization and data representation.
+- **Object Grouping**: Efficiently group objects by type for improved scene management.
+- **Quick Scene Setup**: Set up scenes with predefined lighting and render settings optimized for scientific visualization.
+- **Dynamic Boolean Operations**: Perform boolean operations to create cutaways and cross-sections of your data.
+- **User-Friendly Interface**: Access all functions through a streamlined UI panel designed for scientists and researchers.
+
+## Major Changes from Previous Version
+
+- **Code Reorganization**: The code has been reorganized into separate modules for better maintainability and scalability.
 
 ## Why SciBlend?
 

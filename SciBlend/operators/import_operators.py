@@ -6,7 +6,6 @@ from bpy.props import StringProperty, BoolProperty, EnumProperty, CollectionProp
 from bpy.types import Operator
 import logging
 
-# Configure logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
@@ -112,7 +111,6 @@ class ImportX3DAnimationOperator(bpy.types.Operator, ImportHelper):
             else:
                 self.report({'WARNING'}, f"File {x3d_file} not found.")
 
-        # Configurar la interpolación de los keyframes a constante
         for obj in bpy.data.objects:
             if obj.animation_data and obj.animation_data.action:
                 for fcurve in obj.animation_data.action.fcurves:

@@ -241,7 +241,6 @@ class OrganizeGeometryInCollectionsOperator(bpy.types.Operator):
     def execute(self, context):
         scene = context.scene
         
-        # Crear colecciones para cada frame y objetos Empty como controladores
         collections = []
         empties = []
         for i in range(scene.frame_start, scene.frame_end + 1):
@@ -253,7 +252,6 @@ class OrganizeGeometryInCollectionsOperator(bpy.types.Operator):
                 new_collection = bpy.data.collections[collection_name]
             collections.append(new_collection)
             
-            # Crear un objeto Empty para controlar la visibilidad
             empty_name = f"Visibility_Control_{i}"
             if empty_name not in bpy.data.objects:
                 empty = bpy.data.objects.new(empty_name, None)
@@ -262,7 +260,6 @@ class OrganizeGeometryInCollectionsOperator(bpy.types.Operator):
                 empty = bpy.data.objects[empty_name]
             empties.append(empty)
 
-        # Organizar objetos en colecciones
         for frame, (collection, empty) in enumerate(zip(collections, empties), start=scene.frame_start):
             visible_objects = [obj for obj in scene.objects if obj.type == 'MESH' and not obj.hide_viewport]
             for obj in visible_objects:
@@ -271,7 +268,6 @@ class OrganizeGeometryInCollectionsOperator(bpy.types.Operator):
                 if obj.name in scene.collection.objects:
                     scene.collection.objects.unlink(obj)
 
-            # Configurar visibilidad del Empty
             empty.hide_viewport = False
             empty.hide_render = False
             empty.keyframe_insert(data_path="hide_viewport", frame=frame)
@@ -286,7 +282,6 @@ class OrganizeGeometryInCollectionsOperator(bpy.types.Operator):
                 empty.keyframe_insert(data_path="hide_viewport", frame=frame+1)
                 empty.keyframe_insert(data_path="hide_render", frame=frame+1)
 
-        # Configurar drivers para la visibilidad de las colecciones
         for collection, empty in zip(collections, empties):
             for prop in ["hide_viewport", "hide_render"]:
                 driver = collection.driver_add(prop)
@@ -298,7 +293,6 @@ class OrganizeGeometryInCollectionsOperator(bpy.types.Operator):
                 var.targets[0].data_path = prop
                 driver.driver.expression = 'visibility'
 
-        # Configurar interpolación de keyframes a constante
         for empty in empties:
             if empty.animation_data and empty.animation_data.action:
                 for fcurve in empty.animation_data.action.fcurves:
