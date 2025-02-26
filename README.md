@@ -65,7 +65,7 @@ SciBlend bridges this gap, allowing scientists to:
 ## Requirements
 
 - Blender 4.2 or higher
-- Paraview (for initial data processing)
+- Paraview 5.13 or higher (for initial data processing)
 - Python 3.11 (bundled with Blender 4.2)
 
 ## Installation

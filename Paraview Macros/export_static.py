@@ -1,20 +1,11 @@
 from paraview.simple import *
 import os
-import tkinter as tk
-from tkinter import simpledialog
+import sys
 
-
-def get_folder_path():
-    root = tk.Tk()
-    root.withdraw()
-    folder_selected = simpledialog.askstring(
-        "Input", "Please enter the full directory path where you want to save the file (e.g., /home/user/folder):")
-    root.destroy()
-
-    return folder_selected
-
-
-folder_selected = get_folder_path()
+if len(sys.argv) > 1:
+    folder_selected = sys.argv[1]
+else:
+    folder_selected = input("Please enter the full directory path where you want to save the file: ")
 
 if folder_selected and os.path.isdir(folder_selected):
     file_name = "tmpfile.x3d"
